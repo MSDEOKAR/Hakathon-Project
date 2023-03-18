@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,6 +10,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="40dp"
         android:text="@string/sms_sender"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,56 +21,37 @@
         app:layout_constraintVertical_bias="0.066" />
 
     <EditText
-        android:id="@+id/number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/enter_a_number"
-        android:inputType="phone"
-        android:minHeight="48dp"
-        android:textColorHint="#DD2C00"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.072" />
-
-    <EditText
         android:id="@+id/msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="468dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="190dp"
         android:autofillHints=""
         android:ems="10"
         android:gravity="start|top"
-        android:hint="@string/enter_a_message"
+        android:hint="Enter a Message"
         android:inputType="textMultiLine"
-        android:minHeight="48dp"
-        android:textColorHint="#DD2C00"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone"
-        app:layout_constraintVertical_bias="0.696"
-        tools:ignore="UnknownId" />
+        android:minHeight="48dp" />
 
-    <Button
-        android:id="@+id/submit"
+    <EditText
+        android:id="@+id/Number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/send"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textStyle="bold"
-        app:cornerRadius="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
-        app:layout_constraintVertical_bias="0.059"
-        tools:ignore="UnknownId" />
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="100dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Enter a Number"
+        android:inputType="number"
+        android:minHeight="48dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="270dp"
+        android:onClick="sendSms"
+        android:text="Send SMS" />
+
+</RelativeLayout>
